@@ -6,7 +6,7 @@ on:
       board:
         description: 'Board to build (e.g., uefi-x86, mangopi-m28k)'
         required: true
-        default: 'uefi-x86'
+        default: 'hinlink-h68k'
   push:
     branches:
       - main
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Maximize build space
         run: |
@@ -114,7 +114,7 @@ jobs:
           ls -lh final_output/
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: landscape-image-${{ github.event.inputs.board || 'uefi-x86' }}
           path: final_output/
