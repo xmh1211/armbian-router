@@ -15,7 +15,7 @@ else
     LANDSCAPE_REPO="https://github.com/ThisSeanZhang/landscape"
     ENABLE_KERNEL_CONFIGURE="no"
     ARMBIAN_REPO="https://github.com/armbian/build.git"
-    ARMBIAN_VERSION="v24.08"
+    ARMBIAN_VERSION="v26.5.1"
     echo "Warning: build.env not found, using defaults."
 fi
 
